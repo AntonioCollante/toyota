@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Envíanos tu consulta | Contacto Toyota Perú</title>
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <script>
+        function enviarfrm(form) {
+            var nombres = document.getElementById('nombres').value;
+            var apellidos = document.getElementById('apellidos').value;
+            console.log(name);
+            alert("Estimado" + nombres + " " + apellidos + " Se envio su consulta");
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/estilos.css" />
+</head>
+
+<body>
+
+    <figure id="main_visual">
+        <p class="main_visual"><img src="assets/img/banner-consultas.jpg" alt="Visión"></p>
+    </figure>
+
+    <main class="container">
+
+        <div class="col-md-12">
+
+            <div class="table-responsive">
+
+                <table class="table table-light table-hover">
+
+                    <form action="" name="frmToyota" id="frmToyota" method="post" onsubmit="return enviarfrm(this);">
+                        <thead>
+                            <tr>
+                                <th colspan="12">
+                                    <h1> Consultas</h1>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th colspan="4">
+                                    <h2> datos personales</h2>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <input type="text" name="nombres" id="nombres" class="form-control"
+                                        placeholder="NOMBRES" required>
+                                </td>
+                                <td colspan="3">
+                                    <input type="text" name="apellidos" id="apellidos" class="form-control"
+                                        placeholder="APELLIDOS" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <input type="text" name="dni" id="dni" class="form-control" placeholder="DNI"
+                                        onpaste="return false;" maxlength="8"
+                                        onkeypress="return event.charCode>=48 && event.charCode<=57" required>
+                                </td>
+                                <td colspan="3">
+                                    <input type="text" name="telefono" id="telefono" class="form-control"
+                                        placeholder="TELEFONO" onpaste="return false;" maxlength="10"
+                                        onkeypress="return event.charCode>=48 && event.charCode<=57" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <input type="text" name="celular" id="celular" class="form-control"
+                                        placeholder="CELULAR" onpaste="return false;" maxlength="9"
+                                        onkeypress="return event.charCode>=48 && event.charCode<=57" required>
+                                </td>
+                                <td colspan="3">
+                                    <input type="email" name="email" id="email" class="form-control"
+                                        pattern="[^ @]*@[^ @]*" placeholder="EMAIL" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6">
+                                    <input type="text" name="direccion" id="direccion" class="form-control"
+                                        placeholder="DIRECCION" onpaste="return false;" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <select name="departamento" id="departamento" class="form-control" required>
+                                        <option value="" disabled selected hidden>DEPARTAMENTO</option>
+                                        <option value="">Lima</option>
+                                        <option value="">Norte</option>
+                                        <option value="">centro</option>
+                                        <option value="">sur</option>
+                                    </select>
+                                </td>
+                                <td colspan="2">
+                                    <select name="consecionario" id="consecionario" class="form-control" required>
+                                        <option value="" disabled selected hidden>CONCESIONARIO</option>
+                                        <option value="">Norte</option>
+                                        <option value="">centro</option>
+                                        <option value="">sur</option>
+                                    </select>
+                                </td>
+                                <td colspan="2">
+                                    <select name="mptivo" id="mptivo" class="form-control" required>
+                                        <option value="" disabled selected hidden>MOTIVO DE CONSULTA</option>
+                                        <option value="">Norte</option>
+                                        <option value="">centro</option>
+                                        <option value="">sur</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="4">
+                                    <h2>datos de VEHÍCULO</h2>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="text" name="placa" id="placa" class="form-control" placeholder="PLACA"
+                                        onpaste="return false;" required>
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" name="propietario" id="propietario" class="form-control"
+                                        placeholder="PROPIETARIO" onpaste="return false;" required>
+                                </td>
+                                <td colspan="2">
+                                    <select name="modelo" id="modelo" class="form-control" required>
+                                        <option value="" disabled selected hidden>MODELO</option>
+                                        <option value="">COROLA</option>
+                                        <option value="">COROLO CROSS</option>
+                                        <option value="">AVANZA</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6">
+                                    <textarea class="caja-texto" name="mensaje" placeholder="MENSAJE"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" align="right">
+                                    <label for="cbox2">Acepto los términos y condiciones</label>
+                                    <input type="checkbox" id="cbox2" value="second_checkbox" />
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" align="right">
+                                    <a href="#"><button type='reset'>BORRAR</i></button></a>
+                                    <button type="submit" name="enviar" id="enviar">
+                                        ENVIAR
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </form>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <div class="col-md-12">
+        <footer class="footer">
+            <h2 align="left">TÉRMINOS Y CONDICIONES</h2>
+            <p class="text-center">Al enviar el formulario, acepto los <a
+                    href="https://www.toyotaperu.com.pe/sites/all/themes/toyota/pdf/terminos-condiciones.pdf"
+                    target="_blank">Términos y Condiciones</a> y la <a
+                    href="https://www.toyotaperu.com.pe/sites/all/themes/toyota/pdf/politica-de-privacidad.pdf"
+                    target="_blank">Política de Privacidad</a> de TOYOTA</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
